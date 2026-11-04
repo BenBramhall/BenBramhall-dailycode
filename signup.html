@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build your Dream</title>
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #ffffff;
+        }
+
+        /* Header / Nav */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #111;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #444;
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #555;
+            margin-bottom: 32px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.2s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.4s forwards;
+        }
+
+        .cta-button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+        }
+
+        /* Features / About */
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.15rem;
+            color: #444;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        /* Signup Section */
+        .signup {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .signup h2 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+
+        .signup p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .signup .cta-button {
+            background: #3b82f6;
+        }
+
+        .signup .cta-button:hover {
+            background: #2563eb;
+        }
+
+        /* Footer */
+        footer {
+            background: #f1f5f9;
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        /* Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            nav a {
+                margin-left: 16px;
+                font-size: 0.95rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        .form-container {
+  display: flex;
+  justify-content: center;   /* Horizontal centering */
+  margin: 40px auto;
+  max-width: 500px;          /* Optional: keeps the form from getting too wide */
+  width: 100%;
+  padding: 0 20px;
+}
+
+    </style>
+</head>
+<body>
+
+
+<header>
+    <div class="nav-container">
+        <a href="#" class="logo">Ben Bramhall</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Course</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+</style>
+
+
+   
+<h1>Welcome to the Free HTML/CSS Course for Entrepreneurs</h1>
+
+
+<div class="form-container">
+  <!-- Paste your full Beehiiv embed code here -->
+  <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="c8fcfcdb-172e-4a68-8f65-f3bf30e688db"></script>
+</div>
+
+<footer>
+    <p>© 2026 Ben Bramhall · Free HTML & CSS Course for Entrepreneurs</p>
+</footer>
